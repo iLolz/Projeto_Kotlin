@@ -11,9 +11,19 @@ class StringAlgorithm (description: String, title: String, author: String,  vers
         val newString = StringBuilder()
         val rnd = Random()
 
-        while (newString.length < 26) {                   // length of the random string.
+        while (newString.length < 26) {                                 // length of the random string.
+
+            alphabet[rnd]
+
+
+
+
+
+
+            /*
             val index = (rnd.nextFloat() * alphabet.length).toInt()
             newString.append(alphabet[index])
+            */
         }
 
         val cypher = newString.toString()
