@@ -8,9 +8,9 @@ fun main (args: Array<String>)
 {
      val salg = StringAlgorithm("Just a test", "TOP", "SAVIOLLAGE", 1)
 
-     var aa: String = salg.createPattern()
-     val text: String = "aaaaaaaaaaaaaaaaaaaaaaaaaa"
-
-    println(salg.cesarCypher(text,aa))
+    // var aa: String = salg.createPattern()
+     val text: String = "aaaaaaaaaaaaaaaaaaaaaaaaaabjjjbksdbbjksbdkabkjsd"
+    countOcurrences(text)
+ //   println(aa)
 
 }

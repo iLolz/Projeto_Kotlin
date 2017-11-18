@@ -1,5 +1,6 @@
 
 import java.util.Random
+import javax.swing.JOptionPane
 
 class StringAlgorithm (description: String, title: String, author: String,  version : Int): Algorithm (description,title,author,version)
 {
@@ -13,11 +14,7 @@ class StringAlgorithm (description: String, title: String, author: String,  vers
 
         while (newString.length < 26) {                                 // length of the random string.
 
-            alphabet[rnd]
-
-
-
-
+          //  alphabet[rnd]
 
 
             /*
@@ -36,6 +33,7 @@ class StringAlgorithm (description: String, title: String, author: String,  vers
     {
 
         var Text: String = ((inputText.toInt() + patternCypher.toInt()) %26).toString()
+        JOptionPane.showInputDialog(Text)
 
         return Text
 
