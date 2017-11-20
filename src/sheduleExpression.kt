@@ -4,7 +4,7 @@ fun sheduleExpression(texto: String): String {
 
 
     for (x in texto.toUpperCase()) {
-        // Verifica se ja foram contados os dias
+        // Verifica se ja foram inseridos os dias
 
         if (verif == false) {
             if (x == '2') resp += " Segunda - feira, "
@@ -28,7 +28,7 @@ fun sheduleExpression(texto: String): String {
 
         // verifica se String contem o turno
         if (resp.contains("Manhã")) {
-            //Define os horários
+            //Define os horários noturnos
             if (x == '1') resp += "7h:00m, "
             if (x == '2') resp += "7h:55m, "
             if (x == '3') resp += "8h:50m, "
@@ -38,7 +38,7 @@ fun sheduleExpression(texto: String): String {
         }
         // verifica se String contem turno
         if (resp.contains("Tarde")) {
-            //Define horários
+            //Define horários noturnos
             if (x == '1') resp += "13h:30m, "
             if (x == '2') resp += "14h:25m, "
             if (x == '3') resp += "15h:45m, "
@@ -49,7 +49,7 @@ fun sheduleExpression(texto: String): String {
 
         //verifica se String contem turno
         if (resp.contains("Noite")) {
-            //Define horários
+            //Define horários noturnos
             if (x == '1') resp += "19h:00m, "
             if (x == '2') resp += "19h:50m, "
             if (x == '3') resp += "21h:00m."
