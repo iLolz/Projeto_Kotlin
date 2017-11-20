@@ -6,11 +6,12 @@ open class Algorithm(val description: String, val title: String, val author: Str
 
 fun main(args: Array<String>) {
     val salg = StringAlgorithm("Just a test", "TOP", "SAVIOLLAGE", 1)
-    var op : Int = 0
-    var text : String = "0"
+    val nalg = NumericAlgorithm("Just a test", "TOP", "SAVIOLLAGE", 1)
+    var op: Int = 0
+    var text: String = "0"
     // var aa: String = salg.createPattern()
 
-    op = JOptionPane.showInputDialog("Digite a opção desejada : \n 1) Count Ocurrences\n 2) Shedule Expression").toInt()
+    /*op = JOptionPane.showInputDialog("Digite a opção desejada : \n 1) Count Ocurrences\n 2) Shedule Expression").toInt()
 
     if (op == 1) {
         text = JOptionPane.showInputDialog("Digite a String a ser analisada :")
@@ -34,5 +35,13 @@ fun main(args: Array<String>) {
             JOptionPane.showMessageDialog(null, " Opção Inválida! ")
             System.exit(0)
         }
-    }
-2}
+    }*/
+
+    println("10 para base 62: " + nalg.shortenerEncode(10))
+    println("20 para base 62: " + nalg.shortenerEncode(20))
+    println("30 para base 62: " + nalg.shortenerEncode(30))
+    println("70 para base 62: " + nalg.shortenerEncode(70))
+    println("170 para base 62: " + nalg.shortenerEncode(170))
+
+
+}
