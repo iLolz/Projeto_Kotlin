@@ -27,11 +27,6 @@ fun main(args: Array<String>) {
 
             text = sheduleExpression(text)
             JOptionPane.showMessageDialog(null, text)
-            //}
-
-
-            //   println(aa)
-
 
             System.exit(0)
 
