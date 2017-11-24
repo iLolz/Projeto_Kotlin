@@ -1,5 +1,4 @@
-import java.awt.SystemColor.text
-import javax.swing.JOptionPane
+package main
 
 open class Algorithm(val description: String, val title: String, val author: String, val version: Int = 1)
 
@@ -16,9 +15,9 @@ fun main(args: Array<String>) {
     if (op == 1) {
         text = JOptionPane.showInputDialog("Digite a String a ser analisada :")
 
-        /// countOcurrences chamada ->  A funçao countOcurrences verifica quantas vezes derterminado caracter aparece na sequencia inserida
+        /// main.countOcurrences chamada ->  A funçao main.countOcurrences verifica quantas vezes derterminado caracter aparece na sequencia inserida
 
-        text = countOcurrences(text)
+        text = main.countOcurrences(text)
 
         JOptionPane.showMessageDialog(null, text)
 
@@ -26,7 +25,7 @@ fun main(args: Array<String>) {
         if (op == 2) {
             text  = JOptionPane.showInputDialog("Digite a String a ser analisada :").toString()
 
-            text = sheduleExpression(text)
+            text = main.sheduleExpression(text)
             JOptionPane.showMessageDialog(null, text)
 
             System.exit(0)
@@ -42,6 +41,15 @@ fun main(args: Array<String>) {
     println("30 para base 62: " + nalg.shortenerEncode(30))
     println("70 para base 62: " + nalg.shortenerEncode(70))
     println("170 para base 62: " + nalg.shortenerEncode(170))
+    println()
+    println("A para base 10: " + nalg.shortenerDecode("A"))
+    println("K para base 10: " + nalg.shortenerDecode("K"))
+    println("U para base 10: " + nalg.shortenerDecode("U"))
+    println("U para base 10: " + nalg.shortenerDecode("18"))
+    println("2k para base 10: " + nalg.shortenerDecode("2k"))
+
+
+
 
 
 }

@@ -1,8 +1,8 @@
-
+package main
 import java.util.Random
 import javax.swing.JOptionPane
 
-class StringAlgorithm (description: String, title: String, author: String,  version : Int): Algorithm (description,title,author,version)
+class StringAlgorithm (description: String, title: String, author: String,  version : Int): Algorithm(description,title,author,version)
 {
 
 

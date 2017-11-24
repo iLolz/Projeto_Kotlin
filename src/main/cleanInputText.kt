@@ -1,3 +1,5 @@
+package main
+
 fun cleanIpuntText(text: String): String {
 
     var cleanText: String = ""
