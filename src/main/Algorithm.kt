@@ -41,14 +41,17 @@ fun main(args: Array<String>) {
     println("30 para base 62: " + nalg.shortenerEncode(30))
     println("70 para base 62: " + nalg.shortenerEncode(70))
     println("170 para base 62: " + nalg.shortenerEncode(170))
+
     println()
+
     println("A para base 10: " + nalg.shortenerDecode("A"))
     println("K para base 10: " + nalg.shortenerDecode("K"))
     println("U para base 10: " + nalg.shortenerDecode("U"))
     println("U para base 10: " + nalg.shortenerDecode("18"))
     println("2k para base 10: " + nalg.shortenerDecode("2k"))
 
-
+    println("Brenner: "+ nalg.generateNumberSequence("Brenner"))
+    println("a: " + "Brenner".hashCode())
 
 
 

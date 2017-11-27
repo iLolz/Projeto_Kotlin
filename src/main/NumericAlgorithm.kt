@@ -38,7 +38,7 @@ class NumericAlgorithm (description: String, title: String, author: String, vers
                      aux = indice
 
 
-             newNum = newNum + pow(62.0, tam.toDouble()).toInt() * aux
+             newNum += pow(62.0, tam.toDouble()).toInt() * aux
              tam++
 
         }
@@ -48,14 +48,16 @@ class NumericAlgorithm (description: String, title: String, author: String, vers
 
 
 
-   
+
     fun generateNumberSequence(inputText: String): Int {
 
+        var inputText: String = inputText
+        var h: Int = inputText.hashCode()
+        val M = pow(2.0, 32.0)- 1
 
-
+        return ((h and 0x7fffffff) % M).toInt()
     }
    
-
 
 
 
