@@ -46,6 +46,14 @@ class NumericAlgorithm (description: String, title: String, author: String, vers
         return newNum
     }
 
+
+
+   
+    fun generateNumberSequence(inputText: String): Int {
+
+
+
+    }
    
 
 
