@@ -14,7 +14,7 @@ class testString {
         var firstString = string.countOcurrences("aaaaabcccdddeeffff")
         var firstStringExpected = "5a1b3c3d2e4f"
 
-        
+
 
         Assert.assertEquals(
                 firstString,
@@ -55,11 +55,23 @@ class testString {
     fun testSheduleExpression(){
 
         var firstExpression = string.sheduleExpression("2M34")
-        var firstExpressionExpected = " Segunda - feira,  Manhã, 8h:50m, 10h:05m, "
+        var firstExpressionExpected = "Segunda - feira, Manhã, 8h:50m, 10h:05m,"
 
         Assert.assertEquals(
                 firstExpression,
                 firstExpressionExpected
         )
+    }
+
+
+    @Test
+    fun testCesarChypher(){
+        var text1 = string.cesarCypher("Teste")
+
+        Assert.assertEquals(
+                text1,
+                "Whvwh"
+                )
+
     }
 }

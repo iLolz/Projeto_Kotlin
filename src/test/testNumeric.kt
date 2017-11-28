@@ -15,32 +15,32 @@ class   testNumeric {
        var numero2 = numeric.shortenerEncode(60)
        var numero3 = numeric.shortenerEncode(300)
        var numero4 = numeric.shortenerEncode(1000)
-       var numero5 = numeric.shortenerEncode(62)
+       var numero5 = numeric.shortenerEncode(12345)
 
 
 
        Assert.assertEquals(
                numero1,
-               "A"
+               "k"
        )
 
        Assert.assertEquals(
                numero2,
-               "y"
+               "8"
        )
 
        Assert.assertEquals(
                numero3,
-               "4q"
+               "e0"
        )
 
        Assert.assertEquals(
                numero4,
-               "G8"
+               "qi"
        )
        Assert.assertEquals(
                numero5,
-               "10"
+               "dnh"
        )
    }
 
@@ -55,26 +55,26 @@ class   testNumeric {
 
         Assert.assertEquals(
                 exp1,
-                10
+                26
         )
 
         Assert.assertEquals(
                 exp2,
-                60
+                24
         )
 
         Assert.assertEquals(
                 exp3,
-                300
+                3488
         )
 
         Assert.assertEquals(
                 exp4,
-                1000
+                2044
         )
         Assert.assertEquals(
                 exp5,
-                0
+                52
         )
     }
 

@@ -5,7 +5,7 @@ import java.lang.Math.pow
 class NumericAlgorithm (description: String, title: String, author: String, version : Int): Algorithm(description,title,author,version)
 {
 
-    private val map: String = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    private val map: String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
     fun shortenerEncode(inputNumber: Int): String {
 

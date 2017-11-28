@@ -6,27 +6,29 @@ import javax.swing.JOptionPane
 class StringAlgorithm(description: String, title: String, author: String, version: Int) : Algorithm(description, title, author, version) {
 
 
-    fun createPattern(): String {
-
-        val alphabet = "abcdefghijklmnopqrstuvwxyz"
-        val newString = StringBuilder()
-        val rnd = Random()
-
-        while (newString.length < 26) {                                 // length of the random string.
-
-            //  alphabet[rnd]
-
-
-            /*
-            val index = (rnd.nextFloat() * alphabet.length).toInt()
-            newString.append(alphabet[index])
-            */
+    fun cesarCypher(inputText: String) :String
+    {
+        val shift: Int = 3
+        var d: Char
+        val Text = CharArray(inputText.length)
+        for ((index, c) in inputText.withIndex()) {
+            if (c in 'A'..'Z') {
+                d = c + shift
+                if (d > 'Z') d -= 26
+            }
+            else {
+                if (c in 'a'..'z') {
+                    d = c + shift
+                    if (d > 'z') d -= 26
+                } else
+                    d = c
+            }
+            Text[index] = d
         }
-
-        val cypher = newString.toString()
-        return cypher
-
+        return Text.joinToString("")
     }
+
+
 
     fun countOcurrences(frase: String): String {
         var conta: Int = 0
@@ -54,52 +56,52 @@ class StringAlgorithm(description: String, title: String, author: String, versio
             // Verifica se ja foram inseridos os dias
 
             if (verif == false) {
-                if (x == '2') resp += " Segunda - feira, "
-                else if (x == '3') resp += " Terça - feira, "
-                else if (x == '4') resp += " Quarta - feira, "
-                else if (x == '5') resp += " Quinta - feira, "
-                else if (x == '6') resp += " Sexta - feira, "
-                else if (x == '7') resp += " Sábado, "
+                if (x == '2') resp += "Segunda - feira, "
+                else if (x == '3') resp += "Terça - feira, "
+                else if (x == '4') resp += "Quarta - feira, "
+                else if (x == '5') resp += "Quinta - feira, "
+                else if (x == '6') resp += "Sexta - feira, "
+                else if (x == '7') resp += "Sábado, "
             }
             // Define o Turno
             if (x == 'M') {
                 verif = true
-                resp += " Manhã, "
+                resp += "Manhã,"
             } else if (x == 'T') {
                 verif = true
-                resp += "Tarde, "
+                resp += "Tarde,"
             } else if (x == 'N') {
                 verif = true
-                resp += "Noite, "
+                resp += "Noite,"
             }
 
             // verifica se String contem o turno
             if (resp.contains("Manhã")) {
                 //Define os horários noturnos
-                if (x == '1') resp += "7h:00m, "
-                if (x == '2') resp += "7h:55m, "
-                if (x == '3') resp += "8h:50m, "
-                if (x == '4') resp += "10h:05m, "
-                if (x == '5') resp += "11h:10m."
+                if (x == '1') resp += " 7h:00m,"
+                if (x == '2') resp += " 7h:55m,"
+                if (x == '3') resp += " 8h:50m,"
+                if (x == '4') resp += " 10h:05m,"
+                if (x == '5') resp += " 11h:10m."
 
             }
             // verifica se String contem turno
             if (resp.contains("Tarde")) {
                 //Define horários noturnos
-                if (x == '1') resp += "13h:30m, "
-                if (x == '2') resp += "14h:25m, "
-                if (x == '3') resp += "15h:45m, "
-                if (x == '4') resp += "16h:40m, "
-                if (x == '5') resp += "17h:40m."
+                if (x == '1') resp += " 13h:30m,"
+                if (x == '2') resp += " 14h:25m,"
+                if (x == '3') resp += " 15h:45m,"
+                if (x == '4') resp += " 16h:40m,"
+                if (x == '5') resp += " 17h:40m."
 
             }
 
             //verifica se String contem turno
             if (resp.contains("Noite")) {
                 //Define horários noturnos
-                if (x == '1') resp += "19h:00m, "
-                if (x == '2') resp += "19h:50m, "
-                if (x == '3') resp += "21h:00m."
+                if (x == '1') resp += " 19h:00m,"
+                if (x == '2') resp += " 19h:50m,"
+                if (x == '3') resp += " 21h:00m."
             }
 
         }
@@ -142,13 +144,6 @@ class StringAlgorithm(description: String, title: String, author: String, versio
         return cleanText
     }
 
-    fun cesarCypher(inputText: String, patternCypher: String): String {
 
-        var Text: String = ((inputText.toInt() + patternCypher.toInt()) % 26).toString()
-        JOptionPane.showInputDialog(Text)
-
-        return Text
-
-    }
 
 }
