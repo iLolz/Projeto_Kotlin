@@ -14,6 +14,8 @@ class testString {
         var firstString = string.countOcurrences("aaaaabcccdddeeffff")
         var firstStringExpected = "5a1b3c3d2e4f"
 
+        
+
         Assert.assertEquals(
                 firstString,
                 firstStringExpected

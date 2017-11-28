@@ -9,59 +9,110 @@ class   testNumeric {
 
 
     @Test
-    fun testEncodeDecode()
+    fun testEncode()
    {
-       var num1 = numeric.shortenerEncode(10)
-       var str1 = numeric.shortenerDecode("A")
+       var numero1 = numeric.shortenerEncode(10)
+       var numero2 = numeric.shortenerEncode(60)
+       var numero3 = numeric.shortenerEncode(300)
+       var numero4 = numeric.shortenerEncode(1000)
+       var numero5 = numeric.shortenerEncode(62)
 
 
-       var num2 = numeric.shortenerEncode(350)
-       var str2 = numeric.shortenerDecode("5e")
-
-
-
-       //TESTE COM VALORES MENORES QUE 62
-       Assert.assertEquals(
-               str1,
-               10
-       )
 
        Assert.assertEquals(
-               num1,
+               numero1,
                "A"
        )
 
-
-       //TESTES COM VALORES MAIORES QUE 62
        Assert.assertEquals(
-               str2,
-               350
+               numero2,
+               "y"
        )
 
        Assert.assertEquals(
-               num2,
-               "5e"
+               numero3,
+               "4q"
        )
 
+       Assert.assertEquals(
+               numero4,
+               "G8"
+       )
+       Assert.assertEquals(
+               numero5,
+               "10"
+       )
    }
+
+    @Test
+    fun testDecode(){
+
+        var exp1 = numeric.shortenerDecode("A")
+        var exp2 = numeric.shortenerDecode("y")
+        var exp3 = numeric.shortenerDecode("4q")
+        var exp4 = numeric.shortenerDecode("G8")
+        var exp5 = numeric.shortenerDecode("0")
+
+        Assert.assertEquals(
+                exp1,
+                10
+        )
+
+        Assert.assertEquals(
+                exp2,
+                60
+        )
+
+        Assert.assertEquals(
+                exp3,
+                300
+        )
+
+        Assert.assertEquals(
+                exp4,
+                1000
+        )
+        Assert.assertEquals(
+                exp5,
+                0
+        )
+    }
 
 
     @Test
     fun testHash(){
 
-        var stringGenerated1 = numeric.generateNumberSequence("Teste")
-        var stringGenerated2 = numeric.generateNumberSequence("Hash")
+        var stringGenerated1 = numeric.generateNumberSequence("Savio")
+        var stringGenerated2 = numeric.generateNumberSequence("Alencar")
+        var stringGenerated3 = numeric.generateNumberSequence("Victoria")
+        var stringGenerated4 = numeric.generateNumberSequence("Nagai")
+        var stringGenerated5 = numeric.generateNumberSequence("Teste")
 
 
         //TESTE DO HASH
         Assert.assertEquals(
                 stringGenerated1,
-                "Teste".hashCode()
+                "Savio".hashCode()
         )
 
         Assert.assertEquals(
                 stringGenerated2,
-                "Hash".hashCode()
+                "Alencar".hashCode()
+        )
+
+        Assert.assertEquals(
+                stringGenerated3,
+                "Victoria".hashCode()
+        )
+
+        Assert.assertEquals(
+                stringGenerated4,
+                "Nagai".hashCode()
+        )
+
+        Assert.assertEquals(
+                stringGenerated5,
+                "Teste".hashCode()
         )
     }
 
