@@ -5,17 +5,20 @@ import org.testng.Assert
 import org.testng.annotations.Test
 
 class   testNumeric {
-    var numeric = NumericAlgorithm("oi","teste","saviollage",1)
-   @Test
-    fun testNumeric()
+    var numeric = NumericAlgorithm("Teste do algoritmo numerico","Teste Numerico","Saviollage",1)
+
+
+    @Test
+    fun testEncodeDecode()
    {
        var num1 = numeric.shortenerEncode(10)
        var str1 = numeric.shortenerDecode("A")
 
+
        var num2 = numeric.shortenerEncode(350)
        var str2 = numeric.shortenerDecode("5e")
 
-       var stringGenerated = numeric.generateNumberSequence("Teste")
+
 
        //TESTE COM VALORES MENORES QUE 62
        Assert.assertEquals(
@@ -39,12 +42,29 @@ class   testNumeric {
                num2,
                "5e"
        )
-        //TESTE DO HASH
-       Assert.assertEquals(
-               stringGenerated,
-               "Teste".hashCode()
-       )
+
    }
+
+
+    @Test
+    fun testHash(){
+
+        var stringGenerated1 = numeric.generateNumberSequence("Teste")
+        var stringGenerated2 = numeric.generateNumberSequence("Hash")
+
+
+        //TESTE DO HASH
+        Assert.assertEquals(
+                stringGenerated1,
+                "Teste".hashCode()
+        )
+
+        Assert.assertEquals(
+                stringGenerated2,
+                "Hash".hashCode()
+        )
+    }
+
 
 
 }

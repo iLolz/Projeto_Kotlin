@@ -38,7 +38,7 @@ class StringAlgorithm(description: String, title: String, author: String, versio
             for (i in frase) if (x == i) conta++
 
             if (conta != 0) {
-                resp += (conta.toString() + x + " ")
+                resp += (conta.toString() + x)
             }
             conta = 0
         }
