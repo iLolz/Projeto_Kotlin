@@ -41,6 +41,7 @@ fun main(args: Array<String>) {
     println("30 para base 62: " + nalg.shortenerEncode(30))
     println("70 para base 62: " + nalg.shortenerEncode(70))
     println("170 para base 62: " + nalg.shortenerEncode(170))
+    println("400 para base 62: " + nalg.shortenerEncode(400))
 
     println()
 
@@ -49,9 +50,12 @@ fun main(args: Array<String>) {
     println("U para base 10: " + nalg.shortenerDecode("U"))
     println("U para base 10: " + nalg.shortenerDecode("18"))
     println("2k para base 10: " + nalg.shortenerDecode("2k"))
+    println("6S para base 10: " + nalg.shortenerDecode("6S"))
 
-    println("Brenner: "+ nalg.generateNumberSequence("Brenner"))
-    println("a: " + "Brenner".hashCode())
+    println()
+
+    println("Teste: "+ nalg.generateNumberSequence("Teste"))
+    println("Teste: " + "Teste".hashCode())
 
 
 
