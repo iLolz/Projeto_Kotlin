@@ -4,7 +4,7 @@ import main.NumericAlgorithm
 import org.testng.Assert
 import org.testng.annotations.Test
 
-class testNumeric {
+class   testNumeric {
     var numeric = NumericAlgorithm("oi","teste","saviollage",1)
    @Test
     fun testNumeric()
@@ -29,7 +29,7 @@ class testNumeric {
        )
 
 
-       //TESTES COM VAORES MAIORES QUE 62
+       //TESTES COM VALORES MAIORES QUE 62
        Assert.assertEquals(
                str2,
                350
