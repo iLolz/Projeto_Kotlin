@@ -9,7 +9,7 @@ class NumericAlgorithm(description: String, title: String, author: String, versi
 
     fun shortenerEncode(inputNumber: Int): String {
 
-        var inputNumber: Int = inputNumber.toInt()
+        var inputNumber: Int = inputNumber
         var newBase = StringBuilder()
 
 
