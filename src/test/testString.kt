@@ -11,15 +11,47 @@ class testString {
     @Test
     fun testCountOcurrences(){
 
-        var firstString = string.countOcurrences("aaaaabcccdddeeffff")
-        var firstStringExpected = "5a1b3c3d2e4f"
+        var String1 = string.countOcurrences("aaaaabcccdddeeffff")
+        var String1Expected = "5a1b3c3d2e4f"
 
+        var String2 = string.countOcurrences("qqqqqqqqqquhannnnnnn")
+        var String2Expected = "1a1h7n10q1u"
+
+        var String3 = string.countOcurrences("abcabcabc")
+        var String3Expected = "3a3b3c"
+
+        var String4 = string.countOcurrences("aaaaaaaacddcddc")
+        var String4Expected  ="8a3c4d"
+
+        var String5 = string.countOcurrences("teste")
+        var String5Expected = "2e1s2t"
 
 
         Assert.assertEquals(
-                firstString,
-                firstStringExpected
+                String1,
+                String1Expected
         )
+
+        Assert.assertEquals(
+                String2,
+                String2Expected
+        )
+
+        Assert.assertEquals(
+                String3,
+                String3Expected
+        )
+
+        Assert.assertEquals(
+                String4,
+                String4Expected
+        )
+
+        Assert.assertEquals(
+                String5,
+                String5Expected
+        )
+
 
     }
 
@@ -34,7 +66,11 @@ class testString {
         var thirdExpression  = string.cleanIpuntText("a@][;']b!$];'c[.!$].'./'.'.@#$%ˆ*(&ˆ$#@!˜_def")
         var thirdExpressionExpected = "abcdef"
 
+        var fourthExpression = string.cleanIpuntText("T!e@st%¨#%and{o a][~= fu)([-%&&nc&!@a@@@@@o cl[]e[a]n")
+        var fourthExpressionExpected = "Testandoafuncaoclean"
 
+        var fifthExpression = string.cleanIpuntText("v!a@@@@@i B  r     a[]s[i!!!l")
+        var fifthExpressionExpected = "vaiBrasil"
 
         Assert.assertEquals(
                 firstExpression,
@@ -50,6 +86,16 @@ class testString {
                 thirdExpression,
                 thirdExpressionExpected
         )
+
+        Assert.assertEquals(
+                fourthExpression,
+                fourthExpressionExpected
+        )
+
+        Assert.assertEquals(
+                fifthExpression,
+                fifthExpressionExpected
+        )
     }
 
 
@@ -63,32 +109,7 @@ class testString {
                 firstExpression,
                 firstExpressionExpected
         )
-
-        var secondExpression = string.sheduleExpression("246T23")
-        var secondExpressionExpected = "Segunda - feira, Quarta - feira, Sexta - feira, Tarde, 14h:25m, 15h:45m,"
-
-        Assert.assertEquals(
-                secondExpression,
-                secondExpressionExpected)
-
-        var thirExpression = string.sheduleExpression("6N23")
-        var thidExpressionExpected = "Sexta - feira, Noite, 19h:50m, 21h:00m."
-
-        Assert.assertEquals(
-                thirExpression,
-                thidExpressionExpected)
-
-        var fourthExpression = string.sheduleExpression("5T123")
-        var fouthExpressionExpected = "Quinta - feira, Tarde, 13h:30m, 14h:25m, 15h:45m,"
-
-        Assert.assertEquals(
-                fourthExpression,
-                fouthExpressionExpected)
-
-        var fifthExpression = string.sheduleExpression("3T12")
-        var fifthExpressionExpected = "Terça - feira, Tarde, 13h:30m, 14h:25m,"
     }
-
 
 
     @Test
