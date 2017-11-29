@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
     while (op != "8") {
         op = JOptionPane.showInputDialog(
                 null,
-                "Digite a opcao desejada : " +
+                "Digite a opção desejada : " +
                         "\n 1) Shortener Encoder\n 2) Shortener Decoder \n 3) Generate Number Sequence \n 4) Cesar Cypher \n 5) Count Ocurrences \n " +
                         "6) Shedule expression \n 7) Clean Input Text\n 8) Sair")
 
@@ -48,13 +48,13 @@ fun main(args: Array<String>) {
 
         } else if (op == "6") {
 
-            text = JOptionPane.showInputDialog("Shedule expression, digite o horario no formato necessario, como exemplo (246M23) :")
-            text = StringAlgorithm("Interpretar horarios de aula modelo SIGAA", "SHEDULE EXPRESSION", "Alencar", 1).sheduleExpression(text)
+            text = JOptionPane.showInputDialog("Shedule expression, digite o horário no formato necessário, como exemplo (246M23) :")
+            text = StringAlgorithm("Interpretar horários de aula modelo SIGAA", "SHEDULE EXPRESSION", "Alencar", 1).sheduleExpression(text)
             JOptionPane.showMessageDialog(null, text)
 
         } else if (op == "7") {
 
-            text = JOptionPane.showInputDialog("Clean Input Text, remove espaços e caracteres especiais. \n String a ser analisada :")
+            text = JOptionPane.showInputDialog("Clean Input Text, remove espaços e caracteres especiais. \n String à ser analisada :")
             text = StringAlgorithm(" CleanInputText remove caracteres especiais e espacos da string a ser analisada", "CleanInputText", "Alencar", 1).cleanIpuntText(text)
             JOptionPane.showMessageDialog(null, text)
 
